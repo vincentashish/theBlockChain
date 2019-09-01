@@ -1,3 +1,5 @@
+const Block = require('./Block');
+
 
 class Blockchain {
   constructor() {
@@ -6,19 +8,18 @@ class Blockchain {
 
   addBlock(newBlock) {
     newBlock.previousHash = this.latestBlock().hash;
-    newBlock = newBlock.calculateHash();
+    newBlock.hash = newBlock.calculateHash();
     this.chain = [...this.chain,newBlock];
   }
 
   createGenesis() {
-    return new Block(0,Date.now , "first block","0");
+    return new Block(Date.now() , "first block");
   }
 
   checkValid() {
     for (let i = 1; i < this.chain.length; i++) {
       const currentBlock = this.chain[i];
       const prevBlock = this.chain[i - 1];
-      
       if(currentBlock.hash !== currentBlock.calculateHash()) {
         return false;
       }
