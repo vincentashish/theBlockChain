@@ -1,0 +1,22 @@
+{
+  "name": "theopensourcemessenger",
+  "version": "1.0.0",
+  "description": "[Link1](https://medium.com/@andysingleton/applications-and-architecture-for-blockchain-style-messaging-e609a1aa242d \"Medium Blogpost on Blockchain messaging model\")",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincentashish/theOpenSourceMessenger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vincentashish/theOpenSourceMessenger/issues"
+  },
+  "homepage": "https://github.com/vincentashish/theOpenSourceMessenger#readme",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
+  }
+}
